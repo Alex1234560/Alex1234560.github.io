@@ -14,7 +14,7 @@ function update(){
 	Var+=1;
 	}
 	if (Var >= canvas.width - 50){
-		Var-= 1
+		Var = 10
 		}
 	
 }
