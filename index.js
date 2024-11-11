@@ -13,7 +13,7 @@ function update(){
 	if (Var < canvas.width - 50){
 	Var+=1;
 	}
-	if (Var >= canvas.width - 50){
+	if (Var >= canvas.width - 50-1){
 		Var = 10
 		}
 	
@@ -22,7 +22,7 @@ function update(){
 	
 
 function draw(){
-	c.fillStyle = "rgb(200 0 0)";
+	c.fillStyle = "rgb(0 200 0)";
     c.fillRect(Var, Var/2, 50, 50);
 
     c.fillStyle = "rgb(0 0 200 / 50%)";
