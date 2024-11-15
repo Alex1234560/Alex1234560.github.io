@@ -4,8 +4,8 @@ canvas.height = window.innerHeight;
 
 var c = canvas.getContext('2d');
 
-const radius = 15; // Radius of the circle
-let BallsOnClick = 10;
+const radius = 12; // Radius of the circle
+let BallsOnClick = 12;
 let BounceFactor = 1;//.99;
 let Gravity = 0;//.5;
 
@@ -113,11 +113,13 @@ function update(){
 		if (ball["x"] + radius >= canvas.width || ball["x"]-radius <= 0){ //limits on x axis
 			ball["vx"]*=-1;}
 		if (ball["y"] + radius >= canvas.height || ball["y"]-radius <= 0){ //limits on Y axis
-			ball["vy"]*=-BounceFactor;
+			ball["vy"]*=-BounceFactor;}
 
 		if (ball["y"] + radius >= canvas.height){ball["y"] = canvas.height-radius}//so that ball cant go offscreen when rezising
 		if (ball["x"] + radius >= canvas.width){ball["x"] = canvas.width-radius}//so that ball cant go offscreen when rezising
-		}
+		if (ball["y"] - radius <= 0){ball["y"] = radius}//so that ball cant go offscreen when rezising
+		if (ball["x"] - radius <= 0){ball["x"] = radius}//so that ball cant go offscreen when rezising
+		
 
 
 		ball["x"]+=ball["vx"];
