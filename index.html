@@ -43,9 +43,12 @@
         transform: translate(-50%, -50%);
         padding: 20px 40px;
       }
+      .Reset{
+        top: 10px;right: 10px;
+      }
       
 
-      .ClickToStart:hover{
+      .Hover:hover{
         color: rgba(255,255,255, 1);
       }
 
@@ -55,10 +58,12 @@
     <link rel="stylesheet" href="">
   </head>
   <body>
+    <!-- <button onclick="ResetSimulation()">Click Me</button> -->
+    <h1 class="text Reset Hover"  onclick="ResetSimulation()">Reset</h1>
     <h1 class="text NumberOfBalls" id = 'NumberOfBalls' ></h1>
     <h1 class="text Author" > By Alex Ochoa</h1>
     <h1 class="text ClickToStart " id="ClickToStart" > ClickToStart</h1>
-    <a class = "text Code" href="https://github.com/Alex1234560/Alex1234560.github.io/tree/main"> Code(click)</a>
+    <a class = "text Code Hover" href="https://github.com/Alex1234560/Alex1234560.github.io/tree/main"> Code(click)</a>
     
     <canvas></canvas>
     
